@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Main2 {
     public static void main(String[] args) {
         System.out.println("\t\t\t***Программа определения весов товаров***\n\n\n");
 
@@ -19,30 +19,18 @@ public class Main {
 
         //todo дописать логику программы ниже.
 
-        if (first > second && first > third) {
-            greatest = first;
-        } else if (first < second && first < third) {
-            smallest = first;
-        } else {
+        greatest = first > second && first > third ? first : second > third ? second : third;
+        smallest = first < second && first < third ? first : second < third ? second : third;
+        average = (first > second && first < third) || (first < second && first > third) ? first :
+                (second > first && second < third) || (second < first && second > third) ? second : third;
+
+        /*if((first > second && first < third) || (first < second && first > third)) {
             average = first;
-        }
-
-        if (second > first && second > third) {
-            greatest = second;
-        } else if (second < first && second < third) {
-            smallest = second;
-        } else {
+        } else if ((second > first && second < third) || (second < first && second > third)) {
             average = second;
-        }
-
-        if (third > first && third > second) {
-            greatest = third;
-        } else if (third < first && third < second) {
-            smallest = third;
         } else {
             average = third;
-        }
-
+        }*/
 
         //todo
 

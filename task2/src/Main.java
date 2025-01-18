@@ -51,3 +51,4 @@ public class Main {
         System.out.println("Наименьший вес: " + smallest);
     }
 }
+
